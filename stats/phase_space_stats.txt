@@ -1,0 +1,229 @@
+================================================================================
+PHASE SPACE STATISTICAL ANALYSIS
+Complex Wavefunction: Re(ψ) vs Im(ψ)
+================================================================================
+
+Analysis Date: 2025-10-25 22:25:44
+
+================================================================================
+DATA INFORMATION
+================================================================================
+
+Original dataset sizes:
+  Rectangular: 409,600 points
+  Gaussian:    409,600 points
+
+Statistical analysis sample sizes:
+  Rectangular: 409,600 points
+  Gaussian:    409,600 points
+
+================================================================================
+RECTANGULAR BARRIER - PHASE SPACE ANALYSIS
+================================================================================
+
+--- REAL COMPONENT Re(ψ) ---
+  Mean:     -1.471e-05 nm⁻¹/²
+  Std Dev:  9.126e-02 nm⁻¹/²
+  Median:   -1.041e-16 nm⁻¹/²
+  Min:      -6.839e-01 nm⁻¹/²
+  Max:      7.054e-01 nm⁻¹/²
+  Skewness: 0.015
+  Kurtosis: 11.465
+
+--- IMAGINARY COMPONENT Im(ψ) ---
+  Mean:     -8.353e-06 nm⁻¹/²
+  Std Dev:  9.126e-02 nm⁻¹/²
+  Median:   0.000e+00 nm⁻¹/²
+  Min:      -6.893e-01 nm⁻¹/²
+  Max:      6.984e-01 nm⁻¹/²
+  Skewness: 0.012
+  Kurtosis: 11.466
+
+--- RADIAL DISTRIBUTION |ψ| ---
+  Mean |ψ|:     6.049e-02 nm⁻¹/²
+  Std Dev:      1.140e-01 nm⁻¹/²
+  Median:       5.292e-04 nm⁻¹/²
+  IQR:          6.016e-02 nm⁻¹/²
+  Skewness:     2.397
+  Kurtosis:     5.982
+
+--- ANGULAR DISTRIBUTION arg(ψ) ---
+  Circular mean:      -2.944 rad
+  Circular variance:  0.995
+  Concentration (R):  0.005
+  Angular std dev:    3.234 rad
+  Angular entropy:    6.922 bits
+
+--- PHASE SPACE ENTROPY ---
+  2D Shannon Entropy: 4.381 bits
+
+--- MUTUAL INFORMATION ---
+  I(Re;Im) = 0.553 bits
+  H(Re) = 2.448 bits
+  H(Im) = 2.486 bits
+  H(Re,Im) = 4.381 bits
+  Normalized MI: 0.226
+
+--- PHASE COHERENCE INDEX ---
+  PCI = |⟨ψ⟩| / ⟨|ψ|⟩ = 0.000
+
+--- ANISOTROPY ANALYSIS ---
+  Anisotropy Ratio: 0.000
+  Eigenvalues: λ₁ = 8.329e-03, λ₂ = 8.329e-03
+  Aspect ratio: 1.000
+
+--- ELLIPTICITY MEASURE ---
+  Ellipticity: e = 0.003
+  Semi-major axis: a = 9.126e-02 nm⁻¹/²
+  Semi-minor axis: b = 9.126e-02 nm⁻¹/²
+
+--- PHASE SPACE AREA (95% Quantile) ---
+  Effective area: 3.237e-01 nm⁻¹
+
+--- PHASE SPACE MOMENTS ---
+  ⟨Re²⟩ = 8.329e-03 nm⁻¹
+  ⟨Im²⟩ = 8.329e-03 nm⁻¹
+  ⟨Re·Im⟩ = -4.530e-08 nm⁻¹
+
+--- LINEAR CORRELATION ---
+  Pearson r: -0.000
+  P-value: 9.972e-01
+
+================================================================================
+GAUSSIAN BARRIER - PHASE SPACE ANALYSIS
+================================================================================
+
+--- REAL COMPONENT Re(ψ) ---
+  Mean:     2.117e-06 nm⁻¹/²
+  Std Dev:  9.131e-02 nm⁻¹/²
+  Median:   -3.081e-16 nm⁻¹/²
+  Min:      -8.122e-01 nm⁻¹/²
+  Max:      7.487e-01 nm⁻¹/²
+  Skewness: 0.019
+  Kurtosis: 11.341
+
+--- IMAGINARY COMPONENT Im(ψ) ---
+  Mean:     -1.134e-05 nm⁻¹/²
+  Std Dev:  9.122e-02 nm⁻¹/²
+  Median:   2.155e-16 nm⁻¹/²
+  Min:      -7.993e-01 nm⁻¹/²
+  Max:      6.887e-01 nm⁻¹/²
+  Skewness: -0.070
+  Kurtosis: 11.404
+
+--- RADIAL DISTRIBUTION |ψ| ---
+  Mean |ψ|:     5.999e-02 nm⁻¹/²
+  Std Dev:      1.143e-01 nm⁻¹/²
+  Median:       3.912e-05 nm⁻¹/²
+  IQR:          6.417e-02 nm⁻¹/²
+  Skewness:     2.330
+  Kurtosis:     5.968
+
+--- ANGULAR DISTRIBUTION arg(ψ) ---
+  Circular mean:      2.336 rad
+  Circular variance:  0.967
+  Concentration (R):  0.033
+  Angular std dev:    2.607 rad
+  Angular entropy:    6.935 bits
+
+--- PHASE SPACE ENTROPY ---
+  2D Shannon Entropy: 3.941 bits
+
+--- MUTUAL INFORMATION ---
+  I(Re;Im) = 0.576 bits
+  H(Re) = 2.257 bits
+  H(Im) = 2.260 bits
+  H(Re,Im) = 3.941 bits
+  Normalized MI: 0.255
+
+--- PHASE COHERENCE INDEX ---
+  PCI = |⟨ψ⟩| / ⟨|ψ|⟩ = 0.000
+
+--- ANISOTROPY ANALYSIS ---
+  Anisotropy Ratio: 0.001
+  Eigenvalues: λ₁ = 8.337e-03, λ₂ = 8.320e-03
+  Aspect ratio: 1.001
+
+--- ELLIPTICITY MEASURE ---
+  Ellipticity: e = 0.045
+  Semi-major axis: a = 9.131e-02 nm⁻¹/²
+  Semi-minor axis: b = 9.122e-02 nm⁻¹/²
+
+--- PHASE SPACE AREA (95% Quantile) ---
+  Effective area: 2.763e-01 nm⁻¹
+
+--- PHASE SPACE MOMENTS ---
+  ⟨Re²⟩ = 8.337e-03 nm⁻¹
+  ⟨Im²⟩ = 8.321e-03 nm⁻¹
+  ⟨Re·Im⟩ = -1.970e-06 nm⁻¹
+
+--- LINEAR CORRELATION ---
+  Pearson r: -0.000
+  P-value: 8.797e-01
+
+================================================================================
+COMPARATIVE PHASE SPACE ANALYSIS
+================================================================================
+
+--- ENTROPY COMPARISON ---
+  2D Entropy (Rectangular): 4.381 bits
+  2D Entropy (Gaussian):    3.941 bits
+  Difference:               0.441 bits
+
+--- MUTUAL INFORMATION COMPARISON ---
+  MI (Rectangular): 0.553 bits
+  MI (Gaussian):    0.576 bits
+  Difference:       0.024 bits
+
+--- PHASE COHERENCE COMPARISON ---
+  PCI (Rectangular): 0.000
+  PCI (Gaussian):    0.000
+  Difference:        0.000
+
+--- ANISOTROPY COMPARISON ---
+  Anisotropy (Rectangular): 0.000
+  Anisotropy (Gaussian):    0.001
+  Difference:               0.001
+
+--- ELLIPTICITY COMPARISON ---
+  Ellipticity (Rectangular): 0.003
+  Ellipticity (Gaussian):    0.045
+  Difference:                0.042
+
+--- PHASE SPACE AREA COMPARISON ---
+  Area (Rectangular): 3.237e-01 nm⁻¹
+  Area (Gaussian):    2.763e-01 nm⁻¹
+  Ratio (Rect/Gauss): 1.172
+
+--- ANGULAR CONCENTRATION COMPARISON ---
+  Concentration (Rectangular): 0.005
+  Concentration (Gaussian):    0.033
+  Difference:                  0.028
+
+--- STATISTICAL TESTS ---
+
+  Kolmogorov-Smirnov Test (|ψ|):
+    KS Statistic: 0.187
+    P-value:      0.000e+00
+
+  Angular Variance Comparison:
+    Circular variance (Rectangular): 0.995
+    Circular variance (Gaussian):    0.967
+    Difference: 0.028
+
+================================================================================
+SUMMARY
+================================================================================
+
+Key Findings:
+  • Entropy difference: 0.441 bits
+  • Phase space area ratio: 1.172
+  • Phase coherence (Rect): 0.000
+  • Phase coherence (Gauss): 0.000
+  • Anisotropy (Rect): 0.000
+  • Anisotropy (Gauss): 0.001
+  • Radial distribution KS p-value: 0.000e+00
+
+================================================================================
+END OF ANALYSIS
+================================================================================

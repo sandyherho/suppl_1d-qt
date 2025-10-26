@@ -1,0 +1,324 @@
+================================================================================
+STATISTICAL COMPARISON: RECTANGULAR vs GAUSSIAN BARRIER
+Probability Distribution Analysis with Entropy Measures
+================================================================================
+
+Analysis Date: 2025-10-25 21:24:56
+
+================================================================================
+DATA SAMPLING INFORMATION
+================================================================================
+
+Original dataset sizes:
+  Rectangular: 234,685 points
+  Gaussian:    215,798 points
+
+Analysis dataset sizes (stratified sampling):
+  Rectangular: 100,000 points
+  Gaussian:    100,000 points
+  Sampling preserves distribution characteristics via stratification
+
+================================================================================
+DESCRIPTIVE STATISTICS
+================================================================================
+
+--- RECTANGULAR BARRIER ---
+Sample size: 100,000
+
+Probability |ψ|² Statistics:
+  Mean:     2.905749e-02 nm⁻¹
+  Std Dev:  6.182968e-02 nm⁻¹
+  Median:   1.710231e-03 nm⁻¹
+  Min:      1.000201e-10 nm⁻¹
+  Max:      4.986150e-01 nm⁻¹
+  Q1 (25%): 2.561550e-05 nm⁻¹
+  Q3 (75%): 2.769722e-02 nm⁻¹
+  IQR:      2.767161e-02 nm⁻¹
+  Skewness: 3.6467
+  Kurtosis: 16.4146
+
+--- GAUSSIAN BARRIER ---
+Sample size: 100,000
+
+Probability |ψ|² Statistics:
+  Mean:     3.159878e-02 nm⁻¹
+  Std Dev:  6.369851e-02 nm⁻¹
+  Median:   2.745273e-03 nm⁻¹
+  Min:      1.000306e-10 nm⁻¹
+  Max:      6.647548e-01 nm⁻¹
+  Q1 (25%): 6.362164e-06 nm⁻¹
+  Q3 (75%): 4.107368e-02 nm⁻¹
+  IQR:      4.106731e-02 nm⁻¹
+  Skewness: 4.1154
+  Kurtosis: 23.4876
+
+================================================================================
+INFORMATION-THEORETIC MEASURES (ENTROPY ANALYSIS)
+================================================================================
+
+--- OPTIMAL BIN CALCULATION ---
+
+Rectangular Barrier - Bin Optimization:
+  Sturges' rule:        18
+  Scott's rule:         107
+  Freedman-Diaconis:    419
+  Rice rule:            93
+  Square root rule:     317
+  Doane's formula:      27
+  → Consensus (median): 100 bins
+
+Gaussian Barrier - Bin Optimization:
+  Sturges' rule:        18
+  Scott's rule:         139
+  Freedman-Diaconis:    376
+  Rice rule:            93
+  Square root rule:     317
+  Doane's formula:      27
+  → Consensus (median): 116 bins
+
+--------------------------------------------------------------------------------
+1. SHANNON ENTROPY
+--------------------------------------------------------------------------------
+   Measures the uncertainty/randomness in the probability distribution.
+   H(X) = -∑ p(x) * log₂(p(x))
+   Higher entropy = more uniform distribution
+
+   Rectangular Barrier:
+     Shannon Entropy: 3.0535 bits
+     Bins used:       100
+
+   Gaussian Barrier:
+     Shannon Entropy: 3.1749 bits
+     Bins used:       116
+
+   Entropy Difference: 0.1214 bits
+   → Gaussian barrier shows HIGHER entropy (more dispersed)
+
+--------------------------------------------------------------------------------
+2. KULLBACK-LEIBLER DIVERGENCE
+--------------------------------------------------------------------------------
+   Measures how one distribution diverges from another (asymmetric).
+   KL(P||Q) = ∑ p(x) * log₂(p(x)/q(x))
+   Always ≥ 0; KL = 0 iff distributions are identical
+
+   KL(Rectangular || Gaussian): 0.0635 bits
+   KL(Gaussian || Rectangular): 0.1345 bits
+   Bins used: 108
+
+   Asymmetry: 0.0710 bits
+   → Distributions show SIGNIFICANT divergence
+
+--------------------------------------------------------------------------------
+3. JENSEN-SHANNON DIVERGENCE
+--------------------------------------------------------------------------------
+   Symmetric version of KL divergence, bounded in [0, 1].
+   JS(P||Q) = 0.5*KL(P||M) + 0.5*KL(Q||M), M = 0.5*(P+Q)
+   JS = 0: identical; JS = 1: maximally different
+
+   JS Divergence: 0.0171 bits
+   JS Distance:   0.1307 (metric version)
+   Bins used:     108
+   → VERY SIMILAR distributions
+
+--------------------------------------------------------------------------------
+4. CROSS-ENTROPY
+--------------------------------------------------------------------------------
+   Measures the average number of bits to encode samples from P using Q.
+   H(P,Q) = -∑ p(x) * log₂(q(x))
+
+   H(Rectangular, Gaussian): 2.9272 bits
+   H(Gaussian, Rectangular): 3.2401 bits
+   Bins used: 108
+
+   Cross-entropy vs Shannon entropy:
+   H(R,G) - H(R) = -0.1264 bits (info loss using G for R)
+   H(G,R) - H(G) = 0.0651 bits (info loss using R for G)
+
+--------------------------------------------------------------------------------
+5. RELATIVE ENTROPY MEASURES
+--------------------------------------------------------------------------------
+
+   Normalized Shannon Entropy (H/H_max):
+   Rectangular: 0.4596 (max possible: 6.6439 bits)
+   Gaussian:    0.4630 (max possible: 6.8580 bits)
+
+   Interpretation:
+   - Values close to 1.0 indicate nearly uniform distribution
+   - Lower values indicate more structure/peaking in the distribution
+
+================================================================================
+HYPOTHESIS TESTING
+================================================================================
+
+Significance level: α = 0.05
+
+--------------------------------------------------------------------------------
+1. KOLMOGOROV-SMIRNOV TEST (Two-Sample)
+--------------------------------------------------------------------------------
+   Tests if two samples come from the same distribution.
+   H0: Both samples from same continuous distribution
+   H1: Samples from different distributions
+
+   KS Statistic: 0.0626
+   P-value:      7.781e-171
+   Decision:     REJECT H0 (p < 0.05)
+   Interpretation: Distributions are SIGNIFICANTLY DIFFERENT.
+
+--------------------------------------------------------------------------------
+2. MANN-WHITNEY U TEST
+--------------------------------------------------------------------------------
+   Non-parametric test for difference in central tendency.
+   H0: Distributions have equal medians
+   H1: Distributions have different medians
+
+   U Statistic: 4.977e+09
+   P-value:     7.826e-02
+   Decision:     FAIL TO REJECT H0 (p ≥ 0.05)
+   Interpretation: No significant difference in medians.
+
+--------------------------------------------------------------------------------
+3. KRUSKAL-WALLIS H TEST
+--------------------------------------------------------------------------------
+   Extension of Mann-Whitney to multiple groups.
+   H0: All groups have the same median
+   H1: At least one group differs
+
+   H Statistic: 3.1007
+   P-value:     7.826e-02
+   Decision:     FAIL TO REJECT H0 (p ≥ 0.05)
+   Interpretation: No significant group difference.
+
+--------------------------------------------------------------------------------
+4. MOOD'S TEST
+--------------------------------------------------------------------------------
+   Tests for equal scale parameters (spread/variance).
+   H0: Samples have equal scale
+   H1: Samples have different scale
+
+   Mood Statistic: -35.1707
+   P-value:        5.611e-271
+   Decision:     REJECT H0 (p < 0.05)
+   Interpretation: Scales are SIGNIFICANTLY DIFFERENT.
+
+--------------------------------------------------------------------------------
+5. ANDERSON-DARLING TEST
+--------------------------------------------------------------------------------
+   Tests if samples come from the same distribution.
+   More sensitive to tails than KS test.
+   H0: Samples from same distribution
+   H1: Samples from different distributions
+
+   AD Statistic:     488.2956
+   Critical values:  [0.325 1.226 1.961 2.718 3.752 4.592 6.546]
+   Significance:     0.001
+   Decision:     REJECT H0 (statistic > critical value at 5%)
+   Interpretation: Distributions are SIGNIFICANTLY DIFFERENT.
+
+--------------------------------------------------------------------------------
+6. EPPS-SINGLETON TEST
+--------------------------------------------------------------------------------
+   Tests for equal distributions based on characteristic functions.
+   H0: Samples have same distribution
+   H1: Distributions differ
+
+   ES Statistic: 3012.5811
+   P-value:      0.000e+00
+   Decision:     REJECT H0 (p < 0.05)
+   Interpretation: Distributions are SIGNIFICANTLY DIFFERENT.
+
+--------------------------------------------------------------------------------
+7. ANSARI-BRADLEY TEST
+--------------------------------------------------------------------------------
+   Tests if two samples have same scale (dispersion).
+   H0: Samples have equal scale parameters
+   H1: Scale parameters differ
+
+   AB Statistic: 5273880828.500
+   P-value:      0.000e+00
+   Decision:     REJECT H0 (p < 0.05)
+   Interpretation: Dispersions are SIGNIFICANTLY DIFFERENT.
+                   Gaussian barrier shows GREATER variability.
+
+================================================================================
+EFFECT SIZE MEASURES
+================================================================================
+
+Cliff's Delta: -0.0179
+   Range: [-1, 1]
+   Interpretation guidelines:
+   - |δ| < 0.147: NEGLIGIBLE effect
+   - 0.147 ≤ |δ| < 0.330: SMALL effect
+   - 0.330 ≤ |δ| < 0.474: MEDIUM effect
+   - |δ| ≥ 0.474: LARGE effect
+
+   Result: NEGLIGIBLE effect size
+   Direction: Gaussian barrier has HIGHER probability values
+
+================================================================================
+SUMMARY AND CONCLUSIONS
+================================================================================
+
+--- Key Findings ---
+1. Mean probability density:
+   - Rectangular: 2.905749e-02 nm⁻¹
+   - Gaussian:    3.159878e-02 nm⁻¹
+   - Difference:  2.541287e-03 nm⁻¹
+
+2. Median probability density:
+   - Rectangular: 1.710231e-03 nm⁻¹
+   - Gaussian:    2.745273e-03 nm⁻¹
+   - Difference:  1.035041e-03 nm⁻¹
+
+3. Variability (Std Dev):
+   - Rectangular: 6.182968e-02 nm⁻¹
+   - Gaussian:    6.369851e-02 nm⁻¹
+
+4. Information-theoretic measures:
+   - Shannon Entropy difference:  0.1214 bits
+   - Jensen-Shannon Divergence:   0.0171 bits
+   - KL Divergence (R||G):        0.0635 bits
+   - KL Divergence (G||R):        0.1345 bits
+
+5. Statistical significance:
+   - 5/7 tests showed significant differences (α = 0.05)
+
+--- OVERALL CONCLUSION ---
+The probability distributions from rectangular and Gaussian barriers are
+SIGNIFICANTLY DIFFERENT. The barrier geometry has a SUBSTANTIAL impact on
+the quantum tunneling probability distribution.
+
+--- Physical Interpretation ---
+The quantum tunneling process is sensitive to the detailed shape of the
+potential barrier. Rectangular barriers have sharp edges that can lead to
+different interference patterns compared to the smooth Gaussian profile.
+These geometric differences manifest in the spatial and temporal evolution
+of the probability density, as quantified by both classical statistical
+measures and information-theoretic entropy metrics.
+
+--- Entropy-Based Insights ---
+The similar entropy values suggest comparable degrees of wavefunction
+spreading, despite different barrier geometries.
+The low Jensen-Shannon divergence suggests similar overall tunneling
+behavior despite geometric differences.
+
+================================================================================
+SIMULATION METADATA
+================================================================================
+
+--- Rectangular Barrier ---
+Transmission coefficient: 0.826735
+Reflection coefficient:   0.171434
+Absorbed probability:     0.001109
+Barrier type:             rectangular
+Scenario:                 Case 1 - Rectangular Barrier
+
+--- Gaussian Barrier ---
+Transmission coefficient: 0.786226
+Reflection coefficient:   0.209228
+Absorbed probability:     0.001595
+Barrier type:             gaussian
+Scenario:                 Case 2 - Gaussian Barrier
+
+================================================================================
+END OF STATISTICAL ANALYSIS
+================================================================================

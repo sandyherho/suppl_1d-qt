@@ -1,0 +1,62 @@
+======================================================================
+QUANTUM TUNNELING STATISTICS: Case 1 - Rectangular Barrier
+Barrier Type: rectangular
+======================================================================
+
+Global Results:
+  Transmission coefficient (T): 0.827
+  Reflection coefficient (R):   0.171
+  Absorbed probability (A):     0.001
+  Total (T+R+A):                0.999
+
+======================================================================
+
+Frame (a):
+  Time:                    0.000 fs
+  Normalization:           1.000
+  Position <x>:            -8.000 nm
+  Position std σ_x:        0.799 nm
+  Momentum <k>:            1.407 nm^-1
+  Kinetic energy:          8.153 eV
+  Potential energy:        0.000 eV
+  Total energy:            8.153 eV
+  Max probability density: 0.499 nm^-1
+  Position of max prob:    -7.987 nm
+
+Frame (b):
+  Time:                    1.628 fs
+  Normalization:           1.000
+  Position <x>:            -1.522 nm
+  Position std σ_x:        1.242 nm
+  Momentum <k>:            0.860 nm^-1
+  Kinetic energy:          7.378 eV
+  Potential energy:        0.783 eV
+  Total energy:            8.160 eV
+  Max probability density: 0.358 nm^-1
+  Position of max prob:    -1.275 nm
+
+Frame (c):
+  Time:                    2.080 fs
+  Normalization:           1.000
+  Position <x>:            0.071 nm
+  Position std σ_x:        1.431 nm
+  Momentum <k>:            0.651 nm^-1
+  Kinetic energy:          6.573 eV
+  Potential energy:        1.590 eV
+  Total energy:            8.164 eV
+  Max probability density: 0.445 nm^-1
+  Position of max prob:    -0.073 nm
+
+Frame (d):
+  Time:                    6.000 fs
+  Normalization:           0.999
+  Position <x>:            11.622 nm
+  Position std σ_x:        10.942 nm
+  Momentum <k>:            0.215 nm^-1
+  Kinetic energy:          8.133 eV
+  Potential energy:        0.000 eV
+  Total energy:            8.133 eV
+  Max probability density: 0.093 nm^-1
+  Position of max prob:    15.989 nm
+
+======================================================================
