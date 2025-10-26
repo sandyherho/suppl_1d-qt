@@ -1,5 +1,8 @@
 # Supplementary Materials: "`1d-qt-ideal-solver`: 1D idealized quantum tunneling solver with absorbing boundaries"
 
+[![DOI](https://zenodo.org/badge/1083497967.svg)](https://doi.org/10.5281/zenodo.17446362)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Overview
 
 This repository contains supplementary Python code for statistical analysis and visualization of quantum tunneling case studies. The analysis scripts generate comprehensive statistical reports comparing rectangular and Gaussian barrier scenarios.
